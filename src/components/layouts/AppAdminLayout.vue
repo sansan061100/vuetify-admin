@@ -58,10 +58,8 @@
     <v-app-bar
       :color="isDark ? 'default' : 'white'"
       :dark="isDark"
-      elevation="0"
       app
       class="px-4"
-      elevate-on-scroll
     >
       <v-app-bar-nav-icon
         :class="drawer ? '' : 'menu-toggle'"
@@ -102,6 +100,12 @@
       <v-container fluid>
         <slot></slot>
       </v-container>
+      <v-footer height="auto" class="app--footer">
+        <span class="caption"
+          >&copy; {{ new Date().getFullYear() }} Postify</span
+        >
+        <v-spacer></v-spacer>
+      </v-footer>
     </v-main>
   </v-app>
 </template>
@@ -220,5 +224,10 @@ export default defineComponent({
 <style scoped>
 .no-underline {
   text-decoration: none;
+}
+.app--footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 </style>
