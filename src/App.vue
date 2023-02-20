@@ -1,14 +1,15 @@
 <template>
-  <LayoutApp />
+  <AppLayout>
+    <router-view />
+  </AppLayout>
 </template>
 
 <script>
-import LayoutApp from '@/layouts/LayoutApp.vue';
-
+import AppLayout from "@/components/layouts/AppLayout.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    LayoutApp
-  }
+    AppLayout,
+  },
 };
 </script>
